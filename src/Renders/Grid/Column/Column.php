@@ -13,7 +13,7 @@ use Xbcode\Builder\Components\Table\TableColumn;
  * @method $this type(string $value) 表格列类型
  * @method $this fixed(string $value) 配置是否固定当前列 'left' | 'right' | 'none'
  * @method $this popOver(string $value) 配置查看详情功能
- * @method $this quickEdit(bool $value) 配置快速编辑功能
+ * @method $this quickEdit(array $value) 配置快速编辑功能
  * @method $this quickEditOnUpdate(mixed $value) 作为表单项时，可以单独配置编辑时的快速编辑面板。
  * @method $this copyable(string $value) 配置点击复制功能
  * @method $this sortable(string $value) 配置是否可以排序

@@ -4,9 +4,9 @@ namespace Xbcode\Builder\Renders;
 use JsonSerializable;
 use Xbcode\Builder\Components\CRUD;
 use Xbcode\Builder\Components\Page;
+use Xbcode\Builder\Renders\Common\HeaderToolbar;
 use Xbcode\Builder\Renders\Grid\GridCurd;
 use Xbcode\Builder\Renders\Grid\HeaderView;
-use Xbcode\Builder\Renders\Grid\HeaderToolbar;
 
 /**
  * 表格构建器
@@ -50,16 +50,29 @@ class Grid implements JsonSerializable
 
     /**
      * 创建表格实例
-     * @param array $data
+     * @param string $api
      * @param callable $fun
      * @return Grid
      */
-    public static function make(array $data, callable $fun)
+    public static function make(string $api, callable $fun)
     {
         $grid = new static;
-        // $grid->setData($data);
+        $grid->useCRUD()->api($api);
         $fun($grid);
         return $grid;
+    }
+
+    /**
+     * 设置组件属性
+     * @param string $name
+     * @param mixed $value
+     * @return void
+     * @copyright 贵州积木云网络科技有限公司
+     * @author 楚羽幽 958416459@qq.com
+     */
+    public function setConfig(string $name, mixed $value)
+    {
+        $this->useCRUD()->setVariable($name, $value);
     }
 
     /**

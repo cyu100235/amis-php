@@ -44,4 +44,11 @@ namespace Xbcode\Builder\Components\Form;
  */
 class FormOptions extends FormBase
 {
+    /**
+     * 是否选择组件
+     * @var bool
+     * @copyright 贵州积木云网络科技有限公司
+     * @author 楚羽幽 958416459@qq.com
+     */
+    protected bool $isSelect = true;
 }

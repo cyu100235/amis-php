@@ -12,7 +12,6 @@
 namespace Xbcode\Builder\Components\Form;
 
 use Xbcode\Builder\Components\BaseSchema;
-use Storage;
 
 /**
  * 表单基类
@@ -50,18 +49,30 @@ use Storage;
  */
 class FormBase extends BaseSchema
 {
+    /**
+     * 组件类型
+     * @var string
+     * @copyright 贵州积木云网络科技有限公司
+     * @author 楚羽幽 958416459@qq.com
+     */
     public string $type = "input-text";
 
+    /**
+     * 是否选择组件
+     * @var bool
+     * @copyright 贵州积木云网络科技有限公司
+     * @author 楚羽幽 958416459@qq.com
+     */
+    protected bool $isSelect = false;
 
-    protected function deleteFile($file): bool
+    /**
+     * 获取是否选择类型组件
+     * @return bool
+     * @copyright 贵州积木云网络科技有限公司
+     * @author 楚羽幽 958416459@qq.com
+     */
+    public function getComponentType(): bool
     {
-        // if (is_string($file)) {
-        //     $storage = Storage::disk(config('amis-admin.upload.disk'));
-        //     if ($storage->exists($file)) {
-        //         return $storage->delete($file);
-        //     }
-        // }
-        return false;
+        return $this->isSelect;
     }
-
 }

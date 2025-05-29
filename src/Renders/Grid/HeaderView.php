@@ -1,11 +1,19 @@
 <?php
-
+/**
+ * 积木云渲染器
+ *
+ * @package  XbCode
+ * @author   楚羽幽 <958416459@qq.com>
+ * @version  1.0
+ * @license  Apache License 2.0
+ * @link     http://www.xbcode.net
+ * @document http://doc.xbcode.net
+ */
 namespace Xbcode\Builder\Renders\Grid;
 
-use Xbcode\Builder\Components\Custom\Component;
-use Xbcode\Builder\Components\GridSchema;
 use Xbcode\Builder\Components\Tpl;
-use Xbcode\Builder\Renders\Grid;
+use Xbcode\Builder\Components\GridSchema;
+use Xbcode\Builder\Components\Custom\Component;
 
 /**
  * 页面头部渲染组件
@@ -14,14 +22,6 @@ use Xbcode\Builder\Renders\Grid;
  */
 trait HeaderView
 {
-    /**
-     * 表格实例
-     * @var Grid
-     * @copyright 贵州猿创科技有限公司
-     * @author 楚羽幽 416716328@qq.com
-     */
-    protected Grid $grid;
-
     /**
      * 头部组件列表
      * @var array

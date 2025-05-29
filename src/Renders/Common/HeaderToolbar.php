@@ -9,7 +9,7 @@
  * @link     http://www.xbcode.net
  * @document http://doc.xbcode.net
  */
-namespace Xbcode\Builder\Renders\Grid;
+namespace Xbcode\Builder\Renders\Common;
 
 use Xbcode\Builder\Components\Service;
 use Xbcode\Builder\Components\Action\UrlAction;
@@ -25,11 +25,13 @@ use Xbcode\Builder\Components\Action\DrawerAction;
  */
 trait HeaderToolbar
 {
+    use ComponentUtils;
+    
     /**
-     * 头部组件列表
+     * 页面头部工具栏组件
      * @var array
-     * @copyright 贵州猿创科技有限公司
-     * @author 楚羽幽 416716328@qq.com
+     * @copyright 贵州积木云网络科技有限公司
+     * @author 楚羽幽 958416459@qq.com
      */
     protected array $headerToolbar = [];
 
@@ -164,6 +166,28 @@ trait HeaderToolbar
         $this->headerToolbar[] = $component;
         // 返回组件
         return $component;
+    }
+
+    /**
+     * 动态设置组件属性
+     * @param mixed $component
+     * @param array|callable $callback
+     * @return void
+     * @copyright 贵州猿创科技有限公司
+     * @author 楚羽幽 416716328@qq.com
+     */
+    private function setComponent(mixed $component, array|callable $callback = null)
+    {
+        // 回调函数设置属性
+        if ($callback && is_callable($callback)) {
+            $callback($component);
+        }
+        // 数组设置属性
+        if ($callback && is_array($callback)) {
+            foreach ($callback as $name => $value) {
+                $component->setVariable($name, $value);
+            }
+        }
     }
 
     /**

@@ -42,7 +42,7 @@ namespace Xbcode\Builder\Components\Form;
  * @method $this nativeInputClassName(string $value) 原生 input 标签的 CSS 类名
  * @method $this nativeAutoComplete(string $value) 原生 input 标签的 autoComplete 属性，比如配置集成 new-password
  */
-class InputText extends FormOptions
+class InputText extends FormBase
 {
     public string $type = 'input-text';
 
