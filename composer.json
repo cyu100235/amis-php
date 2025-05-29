@@ -1,0 +1,20 @@
+{
+    "name": "xbcode/builder",
+    "autoload": {
+        "psr-4": {
+            "Xbcode\\Builder\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "楚羽幽",
+            "email": "958416459@qq.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^10.48"
+    }
+}

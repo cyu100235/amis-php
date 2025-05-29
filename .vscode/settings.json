@@ -1,0 +1,26 @@
+{
+    "php.version": "8.1",
+    "php.docblock.classSnippet": {
+        "@copyright": "贵州积木云网络科技有限公司",
+        "@author": "${name:楚羽幽} 958416459@qq.com",
+    },
+    "php.docblock.functionSnippet": {
+        "@copyright": "贵州积木云网络科技有限公司",
+        "@author": "${name:楚羽幽} 958416459@qq.com",
+        "@throws": true
+    },
+    "php.docblock.packageSnippet": {
+        "@copyright": "贵州积木云网络科技有限公司",
+        "@author": "${name:楚羽幽} 958416459@qq.com",
+        "@throws": true
+    },
+    "php.docblock.propertySnippet": {
+        "@copyright": "贵州积木云网络科技有限公司",
+        "@author": "${name:楚羽幽} 958416459@qq.com",
+    },
+    "php.docblock.variableSnippet": {
+        "@copyright": "贵州积木云网络科技有限公司",
+        "@author": "${name:楚羽幽} 958416459@qq.com",
+        "singleline": true
+    },
+}
